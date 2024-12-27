@@ -18,4 +18,10 @@ public class FirstTest {
     Assertions.assertNotNull(javaClasses);
   }
 
+  @Test
+  void importPAth() {
+    JavaClasses javaClasses = new ClassFileImporter().importPath("build/classes/java/test/com/archunit_experiments/");
+    Assertions.assertNotNull(javaClasses);
+  }
+
 }
