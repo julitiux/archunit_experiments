@@ -1,5 +1,7 @@
 package com.archunit_experiments;
 
+import com.archunit_experiments.domain.User;
+import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import org.junit.jupiter.api.Assertions;
@@ -22,6 +24,13 @@ public class FirstTest {
   void importPAth() {
     JavaClasses javaClasses = new ClassFileImporter().importPath("build/classes/java/test/com/archunit_experiments/");
     Assertions.assertNotNull(javaClasses);
+  }
+
+  @Test
+  void getClazz() {
+    JavaClasses javaClasses = new ClassFileImporter().importPackages("com.archunit_experiments");
+    JavaClass clazz = javaClasses.get(User.class);
+    System.out.println(clazz.getSimpleName());
   }
 
 }
