@@ -30,7 +30,12 @@ public class FirstTest {
   void getClazz() {
     JavaClasses javaClasses = new ClassFileImporter().importPackages("com.archunit_experiments");
     JavaClass clazz = javaClasses.get(User.class);
-    System.out.println(clazz.getSimpleName());
-  }
 
+    System.out.println(clazz.getSimpleName());
+    System.out.println(clazz.getAccessesFromSelf());
+    System.out.println(clazz.getAccessesToSelf());
+    System.out.println(clazz.getAllAccessesFromSelf());
+    System.out.println(clazz.getAllFields());
+  }
+  
 }
