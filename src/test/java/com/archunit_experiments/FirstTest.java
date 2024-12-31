@@ -36,6 +36,10 @@ public class FirstTest {
     System.out.println(clazz.getAccessesToSelf());
     System.out.println(clazz.getAllAccessesFromSelf());
     System.out.println(clazz.getAllFields());
+    System.out.println(clazz.getAllClassesSelfIsAssignableTo());
+    System.out.println(clazz.getAllConstructors());
+    System.out.println(clazz.getAllMembers());
+    System.out.println(clazz.getAllRawInterfaces());
   }
-  
+
 }
