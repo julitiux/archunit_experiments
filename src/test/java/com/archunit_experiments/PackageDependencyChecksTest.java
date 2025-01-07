@@ -12,7 +12,7 @@ public class PackageDependencyChecksTest {
   @Test
   void testPackageDependencyChecks() {
 
-    JavaClasses javaClasses = new ClassFileImporter().importPackages("");
+    JavaClasses javaClasses = new ClassFileImporter().importPackages("com.archunit_experiments.package_dependency_checks");
 
     ArchRule rule = noClasses().that().resideInAPackage("..source..")
       .should().dependOnClassesThat().resideInAPackage("..foo..");
